@@ -1,0 +1,42 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.4"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "@openzeppelin/contracts": "^4.4.2",
+    "@tenderly/hardhat-tenderly": "^1.0.10",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.1.1",
+    "hardhat": "2.6.8",
+    "hardhat-deploy": "^0.11.4",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "hardhat-gas-reporter": "^1.0.4",
+    "node-watch": "^0.7.0",
+    "qrcode-terminal": "^0.12.0",
+    "ramda": "^0.27.1"
+  },
+  "scripts": {
+    "chain": "hardhat node --network hardhat --no-deploy",
+    "fork": "hardhat node --no-deploy --network hardhat --fork https://mainnet.infura.io/v3/460f40a260564ac4a4f4b3fffb032dad",
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploytest": "hardhat deploy --network bsctestnet --export-all ../react-app/src/contracts/hardhat_contracts.json",
+    "deploy": "hardhat deploy ",
+    "postdeploy": "hardhat run scripts/publish.js",
+    "watch": "node scripts/watch.js",
+    "accounts": "hardhat accounts",
+    "balance": "hardhat balance",
+    "send": "hardhat send",
+    "generate": "hardhat generate",
+    "account": "hardhat account",
+    "verify": "hardhat verify"
+  }
+}
